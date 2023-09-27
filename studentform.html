@@ -10,16 +10,22 @@
     <!--register form for student detiles-->
     <div class="container">
     <form action="submit.php" method="POST">
-    name:<input class="form-control flex-wrap shadow p-3" type="text" name="name"><br>
-    phone:<input class="form-control flex-wrap shadow p-3" type="phone" name="phone"><br>
-    email:<input class="form-control flex-wrap shadow p-3" type="email" name="email"><br>
-    Date of birth:<input class="form-control flex-wrap shadow p-3" type="date" name="sdate"><br>
-    address:<textarea class="form-control flex-wrap shadow p-3" name="address"></textarea><br>
+    <label for="name">Name</label>
+    <input class="form-control flex-wrap shadow p-3" type="text" name="name"><br>
+    <label for="phone">Phone</label>
+    <input class="form-control flex-wrap shadow p-3" type="phone" name="phone"><br>
+    <label for="email">Email</label>
+    <input class="form-control flex-wrap shadow p-3" type="email" name="email"><br>
+    <label for="dob">Date of Birth</label>
+    <input class="form-control flex-wrap shadow p-3" type="text" name="sdate" placeholder="YYYY-MM-DD" maxlength="10" pattern="\d{4}-\d{2}-\d{2}" title="Please enter a date in YYYY-MM-DD format (e.g., 2023-09-20)">
+    <label for="address">Address</label>
+    <textarea class="form-control flex-wrap shadow p-3" name="address"></textarea><br>
     <button class="btn-outline-primary shadow p-3 mb-5 bg-body rounded" type="submit">Regirter</button>
-    <button class="btn-outline-dark shadow p-3 mb-5 bg-body rounded text-decoration-none" role="button"><a href="display.php" style="text-decoration: none;">display</button>
 
 
     </form>
+    <button class="btn-outline-dark shadow p-3 mb-5 bg-body rounded text-decoration-none" role="button"><a href="display.php" style="text-decoration: none;">display</button>
+
 
     </div>
         

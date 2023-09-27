@@ -5,11 +5,11 @@ $password = '';
 $database = 'school';
 $connect = mysqli_connect($host, $user, $password, $database);
 
-if ($connect) {
-    echo "<h3>Successfully connected</h3>";
-} else {
-    die('Failed to connect');
-}
+// if ($connect) {
+//     echo "<h3>Successfully connected</h3>";
+// } else {
+//     die('Failed to connect');
+// }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Form data storage
@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<h3>Please provide all details correctly</h3>';
     } else {
         
-        $query = "INSERT INTO student(name, phone, email, dob, address) VALUES ('$name', '$phone', '$email', '$dob', '$address')";
+        $query = "INSERT INTO student(Name, Phone, Email, Date of Birth, Address) VALUES ('$name', '$phone', '$email', '$dob', '$address')";
 
         if (mysqli_query($connect, $query)) {
-            //echo '<h1>Successfully registered</h1>';
             header("Location:display.php");
+            exit();
         } else {
             echo '<h3>Registration failed: ' . mysqli_error($connect) . '</h3>';
         }
