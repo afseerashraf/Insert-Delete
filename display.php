@@ -41,13 +41,13 @@ if (isset($_GET['delete'])) {
         {
         ?>
         <tr>
-            <td><?php echo $row['student_id']; ?></td>
+            <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['Name']; ?></td>
             <td><?php echo $row['Phone'];?></td>
             <td><?php echo $row['Email'];?></td>
             <td><?php echo $row['Date of Birth']; ?></td>
             <td><?php echo $row['Address'];?></td>
-            <td><button class="btn btn-outline-danger"><a href="delete.php?id=<?php echo $row['student_id']; ?>" style="text-decoration: none;">Delete</td>
+            <td><button class="btn btn-outline-danger"><a href="delete.php?id=<?php echo $row['id']; ?>" style="text-decoration: none;">Delete</td>
 
             
             

@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 $host = 'localhost';
 $user = 'root';
 $password = '';
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<h3>Please provide all details correctly</h3>';
     } else {
         
-        $query = "INSERT INTO student(Name, Phone, Email, Date of Birth, Address) VALUES ('$name', '$phone', '$email', '$dob', '$address')";
+        $query = "INSERT INTO student (`Name`, `Phone`, `Email`, `Date of Birth`, `Address`) VALUES ('$name', '$phone', '$email', '$dob', '$address')";
 
         if (mysqli_query($connect, $query)) {
             header("Location:display.php");
